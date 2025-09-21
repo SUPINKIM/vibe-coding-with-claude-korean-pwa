@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon-192x192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA 메타태그 -->
+    <meta name="theme-color" content="#4CAF50" />
+    <meta name="description" content="Learn Korean through fun games! 한국어를 재미있게 배우세요!" />
+    
+    <!-- PWA 매니페스트 -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- iOS 지원 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Korean Learning" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Windows -->
+    <meta name="msapplication-TileColor" content="#4CAF50" />
+    <meta name="msapplication-TileImage" content="/icon-192x192.png" />
+    
+    <title>Korean Learning Game 🇰🇷</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA 서비스 워커 등록 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

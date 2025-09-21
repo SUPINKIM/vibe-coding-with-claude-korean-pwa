@@ -1,0 +1,352 @@
+.main-menu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 100px; /* 하단 PWA 버튼을 위한 여백 */
+}
+
+/* 웰컴 섹션 */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(255,107,107,0.1), rgba(156,39,176,0.1));
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #4CAF50, #FF6B6B, #9C27B0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 단계 컨테이너 */
+.stages-container {
+  margin-bottom: 50px;
+}
+
+.stages-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.stage-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 3px solid transparent;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.stage-card:hover:not(.disabled) {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.stage-card.selected {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: currentColor;
+}
+
+.stage-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(30%);
+}
+
+.completion-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.3);
+}
+
+.stage-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.stage-info {
+  text-align: left;
+}
+
+.stage-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.stage-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.stage-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.difficulty-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.items-count {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.3);
+}
+
+.start-prompt {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* 시작 섹션 */
+.start-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.start-button {
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+}
+
+/* 진행률 섹션 */
+.progress-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.progress-section h3 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+}
+
+.progress-item {
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.progress-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.progress-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .main-menu {
+    padding: 20px 15px 120px;
+  }
+  
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .stage-card {
+    padding: 25px 20px;
+  }
+  
+  .stage-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+  
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .start-button {
+    padding: 18px 35px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 30px 15px;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .stages-heading {
+    font-size: 1.6rem;
+  }
+  
+  .stage-title {
+    font-size: 1.2rem;
+  }
+  
+  .progress-number {
+    font-size: 2rem;
+  }
+  
+  .start-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stage-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.stage-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stage-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.progress-section {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.welcome-section {
+  animation: fadeInUp 0.6s ease forwards;
+}
