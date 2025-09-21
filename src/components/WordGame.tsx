@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+//import { useTranslation } from 'react-i18next';
 import { useWordGame } from '../hooks/useWordGame';
 import type { WordCategory } from '../constants/types/word';
 import '../styles/WordGame.css';
 
 const WordGame: React.FC = () => {
-  const { t } = useTranslation();
+ // const { t } = useTranslation();
   const {
     gameState,
     currentQuestion,
