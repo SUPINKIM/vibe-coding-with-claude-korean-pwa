@@ -72,7 +72,7 @@ const HangulGame: React.FC = () => {
 
           <div className='result-message'>
             <div className={resultType}>
-              <span>{t(`results.${resultType}.icon`)}</span>
+              <span>{t(`results.${resultType}.title`)}</span>
               <p>{t(`results.${resultType}.message`)}</p>
             </div>
           </div>
