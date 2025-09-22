@@ -157,6 +157,8 @@
 
 .game-info {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;

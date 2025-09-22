@@ -5,6 +5,7 @@ import HangulGame from './components/HangulGame';
 import WordGame from './components/WordGame';
 import PWAInstallButton from './components/PWAInstallButton';
 import './App.css';
+import SentenceGame from './components/SentenceGame';
 
 function App() {
   const [currentStage, setCurrentStage] = useState<number | null>(null);
@@ -50,13 +51,7 @@ function App() {
             <button className='back-button' onClick={handleBackToMenu}>
               ← Back to Menu
             </button>
-            <div className='coming-soon-stage'>
-              <div className='coming-soon-content'>
-                <h2>🚧 Stage 3 Coming Soon!</h2>
-                <p>Sentence learning will be available in the next update.</p>
-                <p>Stay tuned for greetings and basic conversations! 💬</p>
-              </div>
-            </div>
+            <SentenceGame />
           </>
         )}
       </main>

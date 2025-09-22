@@ -2,44 +2,7 @@ import React, { useState } from 'react';
 import '../styles/MainMenu.css';
 import { useTranslation } from 'react-i18next';
 
-  const stages = [
-    {
-      id: 1,
-      title: 'Stage 1: Hangul Basics',
-      titleKo: '1단계: 한글 기초',
-      description: 'Learn Korean consonants and vowels (ㄱ, ㄴ, ㄷ...)',
-      descriptionKo: '한글 자음과 모음 배우기 (ㄱ, ㄴ, ㄷ...)',
-      icon: '🔤',
-      color: '#4CAF50',
-      difficulty: 'Beginner',
-      items: '24 characters',
-      completed: localStorage.getItem('hangulGameBestScore') !== null,
-    },
-    {
-      id: 2,
-      title: 'Stage 2: Basic Words',
-      titleKo: '2단계: 기본 단어',
-      description: 'Numbers, animals, colors, family & body parts',
-      descriptionKo: '숫자, 동물, 색깔, 가족, 몸',
-      icon: '📝',
-      color: '#FF6B6B',
-      difficulty: 'Beginner+',
-      items: '48 words',
-      completed: localStorage.getItem('wordGameBestStreak') !== null,
-    },
-    {
-      id: 3,
-      title: 'Stage 3: Sentences',
-      titleKo: '3단계: 문장',
-      description: 'Greetings and basic conversations',
-      descriptionKo: '인사말과 기본 회화',
-      icon: '💬',
-      color: '#9C27B0',
-      difficulty: 'Intermediate',
-      items: '20+ phrases',
-      disabled: true,
-    },
-  ];
+ 
 
 interface MainMenuProps {
   onStageSelect: (stage: number) => void;
@@ -47,6 +10,39 @@ interface MainMenuProps {
 
 const MainMenu: React.FC<MainMenuProps> = ({ onStageSelect }) => {
   const { t } = useTranslation()
+
+   const stages = [
+    {
+      id: 1,
+      title: t('mainMenu.stages.stage1.title'),
+      description: t('mainMenu.stages.stage1.description'),
+      difficulty: t('mainMenu.stages.stage1.difficulty'),
+      items: t('mainMenu.stages.stage1.items'),
+      icon: '🔤',
+      color: '#4CAF50',
+      completed: localStorage.getItem('hangulGameBestScore') !== null,
+    },
+    {
+      id: 2,
+      title: t('mainMenu.stages.stage2.title'),
+      description: t('mainMenu.stages.stage2.description'),
+      difficulty: t('mainMenu.stages.stage2.difficulty'),
+      items: t('mainMenu.stages.stage2.items'),
+      icon: '📝',
+      color: '#FF6B6B',
+      completed: localStorage.getItem('wordGameBestStreak') !== null,
+    },
+    {
+      id: 3,
+      title: t('mainMenu.stages.stage3.title'),
+      description: t('mainMenu.stages.stage3.description'),
+      difficulty: t('mainMenu.stages.stage3.difficulty'),
+      items: t('mainMenu.stages.stage3.items'),
+      icon: '💬',
+      color: '#9C27B0',
+      disabled: false,
+    },
+  ];
 
   const [selectedStage, setSelectedStage] = useState<number | null>(null);
 

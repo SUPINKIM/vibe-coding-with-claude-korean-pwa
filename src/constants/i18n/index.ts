@@ -136,13 +136,35 @@ const en = {
       }
     },
     
-    // 3단계: 문장 (예정)
+    // 3단계: 문장 게임
     stage3: {
       title: 'Sentences - Stage 3',
-      subtitle: 'Form Complete Sentences',
-      description: 'Practice basic conversations!',
-      comingSoon: 'This stage is coming soon!',
-      underDevelopment: 'We are working hard to bring you this content.'
+      subtitle: 'Master Korean Conversations',
+      description: 'Practice basic conversations and expressions!',
+      game: {
+        loading: 'Loading sentences...',
+        question: 'Question',
+        whatSentenceMeaning: 'What does this sentence mean?',
+        correct: 'Correct! Well done! ✅',
+        incorrect: 'Try again! ❌',
+        streak: 'Streak'
+      },
+      categories: {
+        greetings: 'Greetings',
+        polite: 'Polite Expressions', 
+        basic_conversation: 'Basic Conversation',
+        daily_expressions: 'Daily Expressions'
+      },
+      results: {
+        excellent: 'Excellent!',
+        great: 'Great Job!',
+        good: 'Good Work!',
+        keepTrying: 'Keep Trying!',
+        perfectScore: 'Perfect Score!',
+        scoreText: 'Your Score',
+        accuracy: 'Accuracy',
+        restart: 'Play Again'
+      }
     },
     
     // 결과 화면
@@ -397,13 +419,35 @@ const ko = {
       }
     },
     
-    // 3단계: 문장 (예정)
+    // 3단계: 문장 게임
     stage3: {
       title: '문장 - 3단계',
-      subtitle: '완전한 문장 만들기',
-      description: '기본 회화를 연습하세요!',
-      comingSoon: '이 단계는 곧 출시됩니다!',
-      underDevelopment: '더 나은 콘텐츠를 준비 중입니다.'
+      subtitle: '한국어 회화 마스터하기',
+      description: '기본 회화와 표현을 연습하세요!',
+      game: {
+        loading: '문장을 불러오는 중...',
+        question: '문제',
+        whatSentenceMeaning: '이 문장의 뜻은 무엇인가요?',
+        correct: '정답입니다! 잘했어요! ✅',
+        incorrect: '다시 시도해보세요! ❌',
+        streak: '연속'
+      },
+      categories: {
+        greetings: '인사말',
+        polite: '정중한 표현',
+        basic_conversation: '기본 회화',
+        daily_expressions: '일상 표현'
+      },
+      results: {
+        excellent: '훌륭해요!',
+        great: '잘했어요!',
+        good: '좋아요!',
+        keepTrying: '계속 노력하세요!',
+        perfectScore: '완벽한 점수!',
+        scoreText: '당신의 점수',
+        accuracy: '정확도',
+        restart: '다시 플레이'
+      }
     },
     
     // 결과 화면
