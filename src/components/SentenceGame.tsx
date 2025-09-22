@@ -267,13 +267,13 @@ const SentenceGame: React.FC = () => {
         <div className="feedback">
           {gameState.selectedAnswer === correctAnswerIndex ? (
             <div className="feedback-correct">
-              <span className="feedback-icon">✅</span>
-              <span>{t('stage3.game.correct')}</span>
+              <span style={{ fontSize: '20x' }}>✅</span>
+              <span style={{ fontSize: '18px' }}>{t('stage3.game.correct')}</span>
             </div>
           ) : (
             <div className="feedback-incorrect">
-              <span className="feedback-icon">❌</span>
-              <span>{t('stage3.game.incorrect')}</span>
+              <span style={{ fontSize: '20px' }}>❌</span>
+              <span style={{ fontSize: '18px' }}>{t('stage3.game.incorrect')}</span>
             </div>
           )}
         </div>

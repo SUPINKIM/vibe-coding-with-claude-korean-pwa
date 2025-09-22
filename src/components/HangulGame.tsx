@@ -44,13 +44,13 @@ const HangulGame: React.FC = () => {
       (gameState.correctAnswers / gameState.totalQuestions) * 100
     );
 
-    let resultType: 'excellent' | 'good' | 'tryAgain';
+    let resultType: 'excellent' | 'good' | 'needsPractice';
     if (percentage >= 80) {
       resultType = 'excellent';
     } else if (percentage >= 60) {
       resultType = 'good';
     } else {
-      resultType = 'tryAgain';
+      resultType = 'needsPractice';
     }
 
     return (

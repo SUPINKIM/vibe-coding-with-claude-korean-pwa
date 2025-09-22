@@ -145,8 +145,8 @@ const en = {
         loading: 'Loading sentences...',
         question: 'Question',
         whatSentenceMeaning: 'What does this sentence mean?',
-        correct: 'Correct! Well done! ✅',
-        incorrect: 'Try again! ❌',
+        correct: 'Correct! Well done!',
+        incorrect: 'Try again!',
         streak: 'Streak'
       },
       categories: {
@@ -428,8 +428,8 @@ const ko = {
         loading: '문장을 불러오는 중...',
         question: '문제',
         whatSentenceMeaning: '이 문장의 뜻은 무엇인가요?',
-        correct: '정답입니다! 잘했어요! ✅',
-        incorrect: '다시 시도해보세요! ❌',
+        correct: '정답입니다! 잘했어요!',
+        incorrect: '다시 시도해보세요!',
         streak: '연속'
       },
       categories: {
